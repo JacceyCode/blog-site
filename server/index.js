@@ -14,7 +14,7 @@ const app = express();
 // MiddleWare
 app.use(express.json({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({ credentials: true, origin: "https://jacceyblog.netlify.app/" }));
+app.use(cors());
 app.use(upload());
 // folder path where images will be saved
 app.use("/uploads", express.static(__dirname + "/uploads"));
