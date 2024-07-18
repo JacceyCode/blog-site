@@ -27,6 +27,7 @@ const Login = () => {
         `${import.meta.env.VITE_APP_BASE_URL}/users/login`,
         userData
       );
+
       const user = await response?.data;
       setCurrentUser(user);
       navigate("/");
@@ -45,7 +46,7 @@ const Login = () => {
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Email (Test - test@test.com)"
             value={userData.email}
             onChange={changeInputHandler}
             required
@@ -54,7 +55,7 @@ const Login = () => {
           <input
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="Password (Test - passowrd)"
             value={userData.password}
             onChange={changeInputHandler}
             required

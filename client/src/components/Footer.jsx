@@ -31,7 +31,9 @@ const Footer = () => {
       </ul>
 
       <div className="footer__copyright">
-        <small>&copy; All Rights Reserved</small>
+        <small>
+          &copy; {new Date().getFullYear()} All Rights Reserved - JacceyCode
+        </small>
       </div>
     </footer>
   );

@@ -27,10 +27,11 @@ const Register = () => {
         userData
       );
       const newUser = await response.data;
+
       if (!newUser) {
         setError("Couldn't register user. Please try again.");
       }
-      console.log(newUser);
+
       navigate("/login");
     } catch (err) {
       setError(err.response?.data.message);
